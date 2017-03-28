@@ -1,0 +1,28 @@
+<html ng-app="fileUpload">
+<head>
+    
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    </head>
+<body>
+    
+    <form  ng-controller="MyCtrl" name="form">
+ 
+        <div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+        ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100" 
+        ngf-resize="{width: 100, height: 100}">Select</div>
+  
+     <!--     <div class="button" ngf-select ng-model="files" ngf-multiple="true">Select</div> -->
+        <div class="button" ngf-select ng-model="files" ngf-multiple="true">Select</div>
+           <div ngf-drop ng-model="files" class="drop-box">Drop</div>
+          <button type="submit" ng-click="submit()">submit</button>
+</form>
+    
+    
+    
+    
+    <script src="app.js"></script>
+    </body>
+</html>
